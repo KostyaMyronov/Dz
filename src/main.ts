@@ -16,12 +16,9 @@ interface Product {
   price: number
 }
 
-const pr1: Product = {id: 1,name: 'яблуко', price: 2}
-const pr2: Product = {id: 2,name: 'груша', price: 13}
-const pr3: Product = {id: 3,name: 'виноград', price: 5}
-const products: object[] = [pr1, pr2, pr3]
+const products: Product[] = [{id: 1,name: 'яблуко', price: 2}, {id: 2,name: 'груша', price: 13}, {id: 3,name: 'виноград', price: 5}]
 
-function highest(products: object[]): string {
+function highest(products: Product[]): string {
   const highest = products.sort((a,b) => b.price - a.price)
   return `Продукт з найвищою цінною - ${highest[0].name}`
 }
